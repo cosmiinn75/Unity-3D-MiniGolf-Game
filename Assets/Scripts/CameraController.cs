@@ -5,14 +5,21 @@ public class CameraController : MonoBehaviour
 {
     public float turningSpeed = 15.0f;
     public Transform player;
-    public Renderer pipeRenderer; // TRAGE TUNELUL (PIPE) AICI ÎN INSPECTOR
+    public Renderer[] obstaclesToHide; 
     public LayerMask obstacleLayer;
 
     Vector3 offset;
-    private bool isPipeHidden = false;
+    private bool[] isHidden;
 
     private void Start()
     {
+        isHidden = new bool[obstaclesToHide.Length];
+        for(int i = 0; i < obstaclesToHide.Length; i++)
+        {
+            isHidden[i] = false;
+        }
+
+
         if (player != null)
             offset = player.position - transform.position;
     }
@@ -43,21 +50,50 @@ public class CameraController : MonoBehaviour
 
         Debug.DrawRay(transform.position, direction * distance, Color.red);
 
-        // Dacă raza lovește CEVA pe layer-ul Obstacle
         if (Physics.Raycast(transform.position, direction, out hit, distance, obstacleLayer))
         {
-            if (pipeRenderer != null && !isPipeHidden)
+            for (int i = 0; i < obstaclesToHide.Length; i++)
             {
-                pipeRenderer.enabled = false; // Ascunde tunelul
-                isPipeHidden = true;
+                if (hit.transform.IsChildOf(obstaclesToHide[i].transform) || hit.transform == obstaclesToHide[i].transform)
+                {
+                    if (!isHidden[i])
+                    {
+                        Renderer[] childRenderers = obstaclesToHide[i].GetComponentsInChildren<Renderer>();
+
+                        foreach (Renderer r in childRenderers)
+                        {
+                   
+                            if (r.gameObject.layer != 6) // layer 6 e layerul cubului senzor
+                            {
+                                r.enabled = false;
+                            }
+                        }
+
+                        
+                        if (obstaclesToHide[i].gameObject.layer != 6)
+                            obstaclesToHide[i].enabled = false;
+
+                        isHidden[i] = true;
+                    }
+                    return;
+                }
             }
         }
-        else
+
+      
+        for (int j = 0; j < obstaclesToHide.Length; j++)
         {
-            if (pipeRenderer != null && isPipeHidden)
+            if (isHidden[j]) 
             {
-                pipeRenderer.enabled = true; // Arată tunelul înapoi
-                isPipeHidden = false;
+                Renderer[] childRenderers = obstaclesToHide[j].GetComponentsInChildren<Renderer>();
+                foreach (Renderer r in childRenderers)
+                {   if (r.gameObject.layer != 6)
+                    {
+                        r.enabled = true;
+                    }
+                }
+                obstaclesToHide[j].enabled = true;
+                isHidden[j] = false;
             }
         }
     }

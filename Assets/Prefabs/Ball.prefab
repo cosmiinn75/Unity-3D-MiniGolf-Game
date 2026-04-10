@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6103251971825121506}
   - component: {fileID: 1009917799575785784}
   - component: {fileID: 2065685303593919241}
+  - component: {fileID: 7315120557116164047}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -131,6 +132,8 @@ MonoBehaviour:
   forceMax: 20
   cooldownForce: 0.2
   arrow: {fileID: 0}
+  strokeText: {fileID: 0}
+  strokes: 0
 --- !u!54 &2065685303593919241
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -158,3 +161,20 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &7315120557116164047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4207914223313344696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f86c3c3a130de4584d86ce357743ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManger
+  hole: {fileID: 0}
+  particle: {fileID: 0}
+  player: {fileID: 0}
+  par: 3
+  ratingText: {fileID: 0}

@@ -4,12 +4,11 @@ using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManger : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public GameObject hole;
     public GameObject particle;
     public GameObject player;
-    private string difficulty = "easy";
     public int par = 3;
     public TextMeshProUGUI ratingText; // birdie, par or bogey
     private PlayerController playerController;
@@ -34,13 +33,20 @@ public class GameManger : MonoBehaviour
     {
         CheckScore();
         particle.gameObject.SetActive(true);
-       // StartCoroutine(LoadNextScene());  
     }
 
     void CheckScore()
     {
         int strokeCount = playerController.strokes;
-        if(strokeCount == par-1)
+        if(strokeCount == 1)
+        {
+            ratingText.text = "HOLE-IN-ONE!";
+        }
+        else if(strokeCount == par - 2)
+        {
+            ratingText.text = "EAGLE!";
+        }
+        else if(strokeCount == par-1)
         {
             ratingText.text = "BIRDIE!";
         }
@@ -60,31 +66,13 @@ public class GameManger : MonoBehaviour
         {
             ratingText.text = "TRIPLE BOGEY!";
         }
-        else if(strokeCount == 1)
+        else
         {
-            ratingText.text = "HOLE-IN-ONE!";
+            ratingText.text = "STAY FOCUSED!";
         }
 
     }
 
 
-    IEnumerator LoadNextScene()
-    {
 
-        yield return new WaitForSeconds(2.0f);
-
-        if(difficulty == "easy") // daca dif e easy se incarca primele 3 scene 
-        {
-            SceneManager.LoadScene(Random.Range(1, 4));
-
-        }
-        else if(difficulty == "medium")
-        {
-            SceneManager.LoadScene(Random.Range(4, 7));
-        }
-        else if(difficulty == "hard")
-        {
-            SceneManager.LoadScene(Random.Range(7, 10));
-        }
-    }
 }

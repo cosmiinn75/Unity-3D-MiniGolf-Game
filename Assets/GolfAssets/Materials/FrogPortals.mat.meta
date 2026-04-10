@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f06b24829cc283043a0e14734a73dd4d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Materials/FrogPortals.mat
+  uploadId: 688455

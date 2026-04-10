@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bc6251a383d566d459b5f017395d38db
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Collectables/Gold.prefab
+  uploadId: 688455

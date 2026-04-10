@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e10b8a5a8f0230c42940e8dce3193002
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Materials/Glass.mat
+  uploadId: 688455

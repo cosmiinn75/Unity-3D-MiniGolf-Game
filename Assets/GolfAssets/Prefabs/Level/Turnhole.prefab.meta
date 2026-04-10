@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 07c0ea4c363724b4c9be66e35eb2e9f5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Level/Turnhole.prefab
+  uploadId: 688455

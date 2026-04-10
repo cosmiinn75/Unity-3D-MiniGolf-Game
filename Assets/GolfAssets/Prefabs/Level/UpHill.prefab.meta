@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e8999d269ed7b3e47b048c17f4115ea5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Level/UpHill.prefab
+  uploadId: 688455

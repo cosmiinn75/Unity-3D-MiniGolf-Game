@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fc6d03c637cf4b446b47d2f216ec96e3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Scenes/Test/LightingData.asset
+  uploadId: 688455

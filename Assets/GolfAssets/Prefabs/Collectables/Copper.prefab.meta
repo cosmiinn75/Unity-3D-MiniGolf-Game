@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f656011738ac50a459db5c8c1f96893a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Collectables/Copper.prefab
+  uploadId: 688455

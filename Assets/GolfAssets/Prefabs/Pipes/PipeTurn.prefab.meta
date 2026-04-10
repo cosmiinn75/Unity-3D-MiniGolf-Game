@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b48b301a3dffd6740aeadf7259b6eeb5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Pipes/PipeTurn.prefab
+  uploadId: 688455

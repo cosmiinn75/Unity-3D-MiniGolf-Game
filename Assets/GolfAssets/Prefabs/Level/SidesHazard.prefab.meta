@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c515f3e5539b8884ea7f2e1a4d94a27c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Level/SidesHazard.prefab
+  uploadId: 688455

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ff15b73cd5e069c4db286a8da49ce702
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Materials/ColorPicker.mat
+  uploadId: 688455

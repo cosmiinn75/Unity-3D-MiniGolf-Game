@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 52c54b11448694c40bedee2b5df9b970
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/InteractProps/Boost.prefab
+  uploadId: 688455

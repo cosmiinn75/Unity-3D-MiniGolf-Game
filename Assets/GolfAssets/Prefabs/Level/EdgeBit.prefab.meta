@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 59f5299e0015f584ba8da3c25dabad0e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Level/EdgeBit.prefab
+  uploadId: 688455

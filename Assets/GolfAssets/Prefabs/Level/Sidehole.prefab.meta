@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8727499c941e7a74485799a892048acc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Level/Sidehole.prefab
+  uploadId: 688455

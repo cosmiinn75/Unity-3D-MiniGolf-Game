@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fc0ff4040bc4333418fb51ffd12f6f46
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Pipes/PipeAnimation.prefab
+  uploadId: 688455

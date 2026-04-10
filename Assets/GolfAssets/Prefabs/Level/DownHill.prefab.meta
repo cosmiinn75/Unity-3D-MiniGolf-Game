@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1e34f523c11fe4a4dbff9e801a5fecf3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Level/DownHill.prefab
+  uploadId: 688455

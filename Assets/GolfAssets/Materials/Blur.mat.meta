@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ee626e974c3baee4389457aae66805d2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Materials/Blur.mat
+  uploadId: 688455

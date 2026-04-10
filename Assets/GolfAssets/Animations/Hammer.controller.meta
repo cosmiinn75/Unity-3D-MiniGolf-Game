@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 686ac3ea1dfdd6e44a95661f95eadfc6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Animations/Hammer.controller
+  uploadId: 688455

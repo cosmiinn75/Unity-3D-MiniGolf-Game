@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2420ab9f71fd6f446bafdfc9d0a0e60f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/InteractProps/Bounce.prefab
+  uploadId: 688455

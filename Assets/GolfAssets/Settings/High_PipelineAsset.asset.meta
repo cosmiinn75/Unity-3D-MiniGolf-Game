@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cf2a1487d1e296942a7b33275e718201
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Settings/High_PipelineAsset.asset
+  uploadId: 688455

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7a5829945a99765499a2d0348ec642a1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Scenes/Test/GlobalVolume Profile.asset
+  uploadId: 688455

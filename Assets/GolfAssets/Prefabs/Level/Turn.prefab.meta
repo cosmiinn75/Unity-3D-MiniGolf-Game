@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1998c21e38ccd7c469ef87eb37027db7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Level/Turn.prefab
+  uploadId: 688455

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c12ea050b83597a47a9dc334f863c691
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Bumpers/Line.prefab
+  uploadId: 688455

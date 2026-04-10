@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ccceb4c745d987d4a8c98874b24128b0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Materials/Checker 1.mat
+  uploadId: 688455

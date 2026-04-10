@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ad6c6fd7e14427047823a5d2f14b53c6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Level/Endhole.prefab
+  uploadId: 688455

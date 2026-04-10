@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ddcd311be36c3f141b05a69b710ebb12
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Materials/SkyBoxGradient.mat
+  uploadId: 688455

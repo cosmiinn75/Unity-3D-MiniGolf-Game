@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0746fe1fda08f104aaca5680daa146c8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/InteractProps/FanWind.prefab
+  uploadId: 688455

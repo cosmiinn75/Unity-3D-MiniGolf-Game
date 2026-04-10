@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2ee6522565e79054186d969618184731
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Level/FullSquareHole.prefab
+  uploadId: 688455

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b1e1a2b79f6f36d4a9e38d545cf8732d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Pipes/PipeStraightEnter.prefab
+  uploadId: 688455

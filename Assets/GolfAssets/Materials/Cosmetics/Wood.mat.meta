@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3a759a4e9e7bd934c900202c84f84d90
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Materials/Cosmetics/Wood.mat
+  uploadId: 688455

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5722c38e7ccb33e429cef840096c8e4f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/InteractProps/Hammer.prefab
+  uploadId: 688455

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: aa2092fa8c47618428e24461b7b93328
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/InteractProps/FanBlade.prefab
+  uploadId: 688455

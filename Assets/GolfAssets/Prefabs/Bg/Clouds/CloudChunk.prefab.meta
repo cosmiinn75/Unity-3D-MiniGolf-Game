@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fa6a77f3d867bed4cbcc7508bbd7378c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Bg/Clouds/CloudChunk.prefab
+  uploadId: 688455

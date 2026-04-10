@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8059fe61d5ebd844a90dcb24d96db4fc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Materials/Cosmetics/BasketBall.mat
+  uploadId: 688455

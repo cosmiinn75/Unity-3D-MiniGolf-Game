@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 55c09f60216869f42ae311aa65fcb1c4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Animations/PipeENTERANCE.anim
+  uploadId: 688455

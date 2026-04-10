@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d1494f85c99b0d9428842d0d78f4051a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Bg/SkySphere.prefab
+  uploadId: 688455

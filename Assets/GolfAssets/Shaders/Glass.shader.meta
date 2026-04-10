@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fd8c0f9e4717ba14dbee042b655f6aee
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Shaders/Glass.shader
+  uploadId: 688455

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5df5ecc31160419418de60d06e191aa1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Animations/Flag.controller
+  uploadId: 688455

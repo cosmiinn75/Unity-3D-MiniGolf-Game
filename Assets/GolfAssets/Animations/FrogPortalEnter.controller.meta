@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f0a834f3f51bc6c4d9bdcc735a20eb40
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Animations/FrogPortalEnter.controller
+  uploadId: 688455

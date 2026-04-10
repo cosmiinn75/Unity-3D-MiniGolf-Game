@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2ab0f99324683f945be41d406774f595
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/InteractProps/WindMillFullColorFull.prefab
+  uploadId: 688455

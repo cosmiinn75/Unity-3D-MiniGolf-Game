@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 80bc920729f878f43b98497f9905649f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Flag.prefab
+  uploadId: 688455

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ec0929028e43d424aa0acb50debdcb04
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Materials/Pipes.mat
+  uploadId: 688455

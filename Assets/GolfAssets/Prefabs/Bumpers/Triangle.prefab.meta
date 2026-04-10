@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b465c127c7a70024ea9586596540d14a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Bumpers/Triangle.prefab
+  uploadId: 688455

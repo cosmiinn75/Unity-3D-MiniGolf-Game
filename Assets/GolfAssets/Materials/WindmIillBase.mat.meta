@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c0f46f2be3dd893439f8671cee13d64b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Materials/WindmIillBase.mat
+  uploadId: 688455

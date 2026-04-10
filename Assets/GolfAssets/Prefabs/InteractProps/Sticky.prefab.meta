@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c2cba89f0396e894d82cc38ae384b193
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/InteractProps/Sticky.prefab
+  uploadId: 688455

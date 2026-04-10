@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0e5b43409606cc54c994716deef95891
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Level/Norails.prefab
+  uploadId: 688455

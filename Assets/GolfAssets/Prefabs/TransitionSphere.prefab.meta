@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 85960fb398252ad4586e07090a32e255
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/TransitionSphere.prefab
+  uploadId: 688455

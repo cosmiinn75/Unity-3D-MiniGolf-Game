@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 732d3378ecf71f042b9d98bc913dc68b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Bumpers/Cross.prefab
+  uploadId: 688455

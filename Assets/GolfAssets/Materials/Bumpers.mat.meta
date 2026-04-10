@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ef0837d9b8f93884a9bacd2478821eba
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Materials/Bumpers.mat
+  uploadId: 688455

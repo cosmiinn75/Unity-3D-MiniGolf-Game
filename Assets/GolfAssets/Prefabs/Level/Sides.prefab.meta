@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 07965f88790b1a1459b5f42b85a2d6e2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Level/Sides.prefab
+  uploadId: 688455

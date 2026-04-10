@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b5a8bbc509d04d84ca618cadf1c51bcd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Level/RampSide.prefab
+  uploadId: 688455

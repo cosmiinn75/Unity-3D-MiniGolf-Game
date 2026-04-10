@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d416008ef127c134e816a1e88fd31f71
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Renderer_Renderer.asset
+  uploadId: 688455

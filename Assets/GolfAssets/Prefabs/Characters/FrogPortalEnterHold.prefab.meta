@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f5692bb23a87000468eb6fe2d283475b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294196
+  packageName: Stylized Mini Golf
+  packageVersion: 1.0
+  assetPath: Assets/GolfAssets/Prefabs/Characters/FrogPortalEnterHold.prefab
+  uploadId: 688455

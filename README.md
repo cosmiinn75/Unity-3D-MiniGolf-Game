@@ -47,7 +47,7 @@ This repository contains the full Unity project source:
 
 
 🚀 Devlog: Medium Level Completion & Camera System Fix - 10.04.2026
-🟢 Progress Summary
+🟢 Progress Summary:
 Today I successfully completed the First Medium Difficulty Level and overhauled the Camera Obstacle System to handle complex hierarchies.
 
 🛠️ Key Technical Solved:

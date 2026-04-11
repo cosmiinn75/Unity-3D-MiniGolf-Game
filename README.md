@@ -58,3 +58,22 @@ Layer-Based Filtering: Refined the script to hide all child renderers except tho
 Hierarchy Optimization: Organized the Windmill assets so the FanAnimation is a child of the Base. This fixed the issue where parts of the obstacle remained visible while others disappeared.
 
 Scene 4 (Medium) Setup: Fully configured the environment for the new level, including terrain adjustments and proper obstacle placement.
+
+🚀 Devlog: Aesthetic Overhaul & Dynamic Obstacles - 11.04.2026
+🟢 Progress Summary:
+Today I finalized the Second Medium Difficulty Level and executed a major visual pivot. The development cycle was extremely efficient, with zero major bugs or compilation regressions.
+
+🛠️ Key Technical Solved / Implemented:
+
+Visual Identity Shift: Replaced standard environment assets with a Sakura-themed aesthetic (pinks/purples). This involved re-mapping materials and adjusting world-space lighting to create a more unique and immersive atmosphere.
+
+Dynamic Timing Obstacles: Integrated a complex moving part,a Hammer strike. Calibrated the collision box to ensure fair but challenging "timing-based" gameplay.
+
+Strategic Level Design: Implemented a "High Risk, High Reward" shortcut. Designed a specific jump that rewards good aiming and power with a hole-in-one.
+
+Environment Detailing: Optimized the placement of rock formations and varied tree hierarchies to break the tiling of the terrain and improve the overall "Game Feel."
+
+📅 Next Steps:
+
+Commence development on Hard Levels.
+

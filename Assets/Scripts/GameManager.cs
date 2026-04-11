@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject hole;
     public GameObject particle;
     public GameObject player;
-    public int par = 3;
+   [SerializeField] private int par = 3;
     public TextMeshProUGUI ratingText; // birdie, par or bogey
     private PlayerController playerController;
 
@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     {
         CheckScore();
         particle.gameObject.SetActive(true);
+        
     }
 
     void CheckScore()
@@ -68,7 +69,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            ratingText.text = "STAY FOCUSED!";
+            ratingText.text = "FOCUS!";
         }
 
     }

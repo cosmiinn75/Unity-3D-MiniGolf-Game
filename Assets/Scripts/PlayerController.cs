@@ -20,7 +20,11 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI strokeText;
     public int strokes = 0;
     private Vector3 lastPos;
-
+    private bool isResetting = false;
+    private bool isAtFullForce = false;
+    private float cancelTimer = 0.0f;
+    private bool shotCancelled = false;
+    public AudioClip puttSound;
     private void Start()
     {
         DisplayStrokeText();
@@ -64,20 +68,24 @@ public class PlayerController : MonoBehaviour
 
     void CheckForStop()
     {
-        if (rb.linearVelocity.magnitude <= 0.05f)
+        if (rb.linearVelocity.magnitude <= 0.05f && rb.isKinematic == false)
         {
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
+            ResetSpeed();
             isMoving = false;
         }
     }
 
     void HandleInput()
     {
+
         //pressed
         if (Mouse.current.leftButton.wasPressedThisFrame && !isMoving)
         {
-            lastPos = transform.position; // retinem ultima pozitie
+            if (transform.parent == null)
+            {
+                lastPos = transform.position;
+            } // retinem ultima pozitie
+
             //Initializam forta
             force = 1.0f;
             timer = 0;
@@ -92,11 +100,12 @@ public class PlayerController : MonoBehaviour
         //held
         if (Mouse.current.leftButton.isPressed && force >= 1.0f && isMoving == false)
         {
+            
             ArrowColor();
             arrow.gameObject.GetComponent<SpriteRenderer>().enabled = true;
             timer += Time.deltaTime;
 
-            if (timer >= cooldownForce)
+            if (timer >= cooldownForce && !isAtFullForce)
             {   //Marim sageata
                 force += 1.0f;
                 
@@ -114,6 +123,21 @@ public class PlayerController : MonoBehaviour
             if (force > forceMax)
             {
                 force = forceMax;
+                isAtFullForce = true;
+            }
+
+            if (isAtFullForce)
+            { 
+                float maxTime = 1.0f;
+                cancelTimer += Time.deltaTime;
+                if(cancelTimer > maxTime)
+                {
+                    shotCancelled = true;
+                    force = 0.0f;
+                    arrow.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                    cancelTimer = 0.0f;
+                    isAtFullForce = false;
+                }
             }
 
 
@@ -121,26 +145,35 @@ public class PlayerController : MonoBehaviour
 
 
         //released
-        if (Mouse.current.leftButton.wasReleasedThisFrame && force >= 1.0f)
+        if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
-            strokes++;
-            DisplayStrokeText();
-            Shoot();
-            force = 0;
-            isMoving = true;
-            arrow.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            if (force >= 1.0f && !shotCancelled)
+            {
+                strokes++;
+                DisplayStrokeText();
+                Shoot();
+                isMoving = true;
+            }
 
+            force = 0;
+            isAtFullForce = false;
+            shotCancelled = false;
+            cancelTimer = 0.0f;
+            arrow.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 
 
     void Shoot()
     {
- 
+        if(puttSound != null)
+        {
+            AudioSource.PlayClipAtPoint(puttSound, transform.position, 1.0f);
+        }
         float camY = Camera.main.transform.eulerAngles.y;
         Vector3 finalDir = Quaternion.Euler(0, camY, 0) * Vector3.forward * force;
         rb.AddForce(finalDir, ForceMode.VelocityChange);
-        Debug.DrawRay(transform.position, finalDir * 50.0f, Color.red, 10.0f);
+      //  Debug.DrawRay(transform.position, finalDir * 50.0f, Color.red, 10.0f);
     }
 
 
@@ -181,32 +214,69 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 normal = collision.contacts[0].normal;
             float bumperSpeed = 3.0f;
-            Vector3 reflectedDir = Vector3.Reflect(transform.position, normal).normalized;
+            Vector3 reflectedDir = Vector3.Reflect(rb.linearVelocity, normal).normalized;
             rb.AddForce(reflectedDir*bumperSpeed, ForceMode.VelocityChange);
         }
 
 
-        if (collision.gameObject.CompareTag("isTerrain"))
+        if (collision.gameObject.CompareTag("isTerrain") )
         {
+            if (!isResetting) {
+                isResetting = true;
+                StartCoroutine(ResetPositionAfterDelay()); 
+            }
 
-            StartCoroutine(ResetPositionAfterDelay());
+            
         }
-        
+
+
+        if (collision.gameObject.CompareTag("isPlatform"))
+        {
+            transform.SetParent(collision.transform);
+            rb.linearDamping = 2.0f;
+            
+        }
+
 
     }
+
+
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("isPlatform"))
+        {
+            transform.SetParent(null);
+            rb.linearDamping = 1.0f;
+        }
+    }
+
     IEnumerator ResetPositionAfterDelay()
     {
-        yield return new WaitForSeconds(1.0f);
+       
+        yield return new WaitForSeconds(0.8f);
+
+
+        if (rb != null)
+        {
+            ResetSpeed();
+        }
+
+        rb.isKinematic = true;
 
         transform.position = lastPos;
 
-        if(rb != null)
-        {
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-        }
+        yield return new WaitForSeconds(0.1f);
+
+        rb.isKinematic = false;
+        isResetting = false;
+        isMoving = false;
     }
   
-
+    private void ResetSpeed()
+    {
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+    }
 
 }

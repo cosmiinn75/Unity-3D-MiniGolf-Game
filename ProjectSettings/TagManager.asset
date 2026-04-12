@@ -11,6 +11,7 @@ TagManager:
   - isTerrain
   - isHole
   - Obstacol
+  - isPlatform
   layers:
   - Default
   - TransparentFX

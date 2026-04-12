@@ -77,3 +77,33 @@ Environment Detailing: Optimized the placement of rock formations and varied tre
 
 Commence development on Hard Levels.
 
+🚀 Devlog: Physics-Sync, Hard Levels & Audio Integration - 12.04.2026
+🟢 Progress Summary:
+Today was a high-productivity cycle focused on high-difficulty content and physics stabilization. I successfully completed two Hard Difficulty Levels (Hard 1 & Hard 2), solved the critical synchronization issues between the ball and moving platforms as well as a bug in the respawning feature. Additionally, I fixed the UI and I began the audio implementation phase.
+
+🛠️ Key Technical Solved / Implemented:
+
+Physics-Based Platform Sync: Implemented a robust Parenting System for moving platforms. By switching platform movement to FixedUpdate I eliminated the "jitter" and "falling through" bugs, ensuring the ball stays perfectly grounded while the platform oscillates.
+
+Intelligent Respawn Logic: Fixed a major "Race Condition" bug where the ball would respawn in mid-air if it fell while on a moving platform. Now the last position of the ball is only remember if it's not on the platform(doesn't have the platform as a parent).
+
+UI Positioning: Fixed a major visual by moving the UI text in the right positions.
+
+Advanced Level Design (Hard 1 & 2): Constructed a Vertical Elevator mechanic for high-altitude hole placements.
+
+Designed a Multi-Path Choice system, forcing players to choose between a safe, long route or a high-risk shortcut.
+
+Audio Feedback System: Integrated the first iteration of sound effects using AudioSource.PlayClipAtPoint. Added a satisfying Putt Sound triggered precisely at the moment of launch, significantly improving the tactile "Game Feel."
+
+Dynamic Ball Physics: Adjusted linearDamping (Drag) dynamically when the ball touches moving platforms. This "friction hack" prevents the ball from sliding off due to centrifugal force or rapid vertical acceleration.
+
+📅 Next Steps:
+
+Starting the development of the Main Menu with good scene management.
+
+Integrating more sound effects and background music.
+
+Adding a "freeze" window that let's you restart the level or escape to the Main Menu.
+
+Adding a local BestScore that keeps track of the number of strokes you did in the 7 available levels.
+

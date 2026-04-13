@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private float cancelTimer = 0.0f;
     private bool shotCancelled = false;
     public AudioClip puttSound;
+    private bool isLevelFinished = false;
     private void Start()
     {
         DisplayStrokeText();
@@ -41,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
         //La viteza asta mica consideram mingea oprita
         CheckForStop();
-        if (!isMoving)
+        if (!isMoving && !isLevelFinished && Time.timeScale != 0)
         {
             HandleInput();
         }
@@ -272,7 +273,17 @@ public class PlayerController : MonoBehaviour
         isResetting = false;
         isMoving = false;
     }
-  
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("isHole"))
+        {
+            isLevelFinished = true;
+            arrow.SetActive(false);
+            ResetSpeed();
+            rb.isKinematic = true;
+        }
+    }
     private void ResetSpeed()
     {
         rb.linearVelocity = Vector3.zero;

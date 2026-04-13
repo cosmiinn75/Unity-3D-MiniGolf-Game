@@ -1,8 +1,6 @@
 using System.Collections;
 using TMPro;
-using UnityEditor.EditorTools;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,7 +31,8 @@ public class GameManager : MonoBehaviour
     {
         CheckScore();
         particle.gameObject.SetActive(true);
-        
+
+        StartCoroutine(LoadNextScene());
     }
 
     void CheckScore()
@@ -74,6 +73,10 @@ public class GameManager : MonoBehaviour
 
     }
 
-
+    IEnumerator LoadNextScene()
+    {
+        yield return new WaitForSeconds(3.0f);
+        LevelManager.Instance.LoadNextLevel();
+    }
 
 }

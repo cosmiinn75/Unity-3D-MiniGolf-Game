@@ -32,7 +32,7 @@ public class MovingPlatform : MonoBehaviour
 
         transform.position = startPos + direction * movement;
         
-      b
+      
 
     }
 

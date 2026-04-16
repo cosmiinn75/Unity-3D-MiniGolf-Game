@@ -83,9 +83,9 @@ Today was a high-productivity cycle focused on high-difficulty content and physi
 
 🛠️ Key Technical Solved / Implemented:
 
-Physics-Based Platform Sync: Implemented a robust Parenting System for moving platforms. By switching platform movement to FixedUpdate I eliminated the "jitter" and "falling through" bugs, ensuring the ball stays perfectly grounded while the platform oscillates.
+Physics-Based Platform Sync: Implemented a robust Parenting System for moving platforms. By switching the platform movement to FixedUpdate I eliminated the "jitter" and "falling through" bugs, ensuring the ball stays perfectly grounded while the platform oscillates.
 
-Intelligent Respawn Logic: Fixed a major "Race Condition" bug where the ball would respawn in mid-air if it fell while on a moving platform. Now the last position of the ball is only remember if it's not on the platform(doesn't have the platform as a parent).
+Intelligent Respawn Logic: Fixed a major "Race Condition" bug where the ball would respawn in mid-air if it fell while on a moving platform. Now the last position of the ball is only remembered if it's not on the platform(doesn't have the platform as a parent).
 
 UI Positioning: Fixed a major visual by moving the UI text in the right positions.
 
@@ -103,7 +103,29 @@ Starting the development of the Main Menu with good scene management.
 
 Integrating more sound effects and background music.
 
-Adding a "freeze" window that let's you restart the level or escape to the Main Menu.
+Adding a pause menu that let's you restart the level or quit to the Main Menu.
 
 Adding a local BestScore that keeps track of the number of strokes you did in the 7 available levels.
+
+🚀 Devlog: Main Menu Architecture, Audio & Navigation - 14.04.2026
+🟢 Progress Summary:
+Today I established the core game flow by implementing a fully functional Main Menu and a Pause system. I focused on the "Game Feel" by adding interactive audio feedback and ensuring seamless scene transitions across the project.
+
+🛠️ Key Technical Solved / Implemented:
+
+Main Menu Infrastructure: Constructed a dedicated Main Menu scene with a persistent UI layout. Integrated a SceneLoader logic to handle transitions from the menu to the initial levels, ensuring all game states reset correctly upon starting.
+
+Interactive UI Audio: Implemented an audio feedback system for UI elements. Added PointerEnter sound effects to all menu buttons using EventTriggers, providing tactile confirmation when the player hovers over options.
+
+Pause Menu Logic & Input Sync: Fully integrated the Pause Menu using the modern Input System. Refactored the script to use Invoke Unity Events, allowing the "Escape" key to reliably toggle Time.timeScale and manage the Pause UI overlay without input lag or double-triggering.
+
+Navigation & Scene Management: Added "Quit to Main Menu" and "Resume Level" functionality. This involved managing the UnityEngine.SceneManagement namespace to handle level resuming while ensuring the timeScale is restored to 1.0 immediately upon exit.
+
+📅 Next Steps:
+
+Commence development on the Leaderboard system to track "Top 3" performances per level.
+
+Design the "Hall of Fame" UI to display best strokes, time, and dates.
+
+Adding more Audios Sounds for different number of strokes.
 

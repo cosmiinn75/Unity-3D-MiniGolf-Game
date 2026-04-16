@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
         //Dezactivam sageata la start
         arrow.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         lastPos = transform.position;
+        strokes = 0;
     }
 
 
@@ -150,7 +151,9 @@ public class PlayerController : MonoBehaviour
         {
             if (force >= 1.0f && !shotCancelled)
             {
+                
                 strokes++;
+           
                 DisplayStrokeText();
                 Shoot();
                 isMoving = true;
@@ -276,7 +279,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("isHole"))
+        if (other.gameObject.CompareTag("isHole") && !isLevelFinished)
         {
             isLevelFinished = true;
             arrow.SetActive(false);
@@ -289,5 +292,6 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
     }
+
 
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Toolbars;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,9 +13,12 @@ public class LevelManager : MonoBehaviour
 
     private List<string> fullPlaylist = new List<string>();
     private int currentLevelIndex = 0;
-
+    public GameObject bestScoresPanel;
+    public GameObject optionsMenu;
+    public GameObject mainMenu;
     private void Awake()
     {
+
         if (Instance == null)
         {
             Instance = this;
@@ -25,6 +29,7 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
 
     void GenerateRandomPlaylist()
@@ -56,18 +61,47 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void StartNewGame()
+    {
+        if (GameSessionManager.Instance != null)
+        {
+            GameSessionManager.Instance.totalStrokes = 0;
+            GameSessionManager.Instance.totalTime = 0f;
+            GameSessionManager.Instance.StartSession();
+        }
+        currentLevelIndex = 0;
+        GenerateRandomPlaylist();
+        LoadNextLevel(); // Încarcă primul nivel din playlist-ul proaspăt
+    }
+
     public void LoadNextLevel()
     {
+        if (GameSessionManager.Instance != null)
+        {
+            GameSessionManager.Instance.StartSession();
+        }
+        // Verificăm dacă mai avem nivele în listă
         if (currentLevelIndex < fullPlaylist.Count)
         {
             string sceneToLoad = fullPlaylist[currentLevelIndex];
-            currentLevelIndex++;
+            currentLevelIndex++; // Trecem la următorul nivel pentru data viitoare
             SceneManager.LoadScene(sceneToLoad);
         }
         else
         {
-            // Resetăm playlist-ul pentru o tură nouă dacă se întoarce în MainMenu
+            // AM TERMINAT TOATE NIVELELE
+            if (GameSessionManager.Instance != null)
+            {
+                GameSessionManager.Instance.StopSession();
+                BestScoreManager.SaveNewScore(
+                    GameSessionManager.Instance.totalStrokes,
+                    GameSessionManager.Instance.GetFormattedTime(),
+                    GameSessionManager.Instance.totalTime
+                );
+            }
             SceneManager.LoadScene("MainMenu");
+            // Resetăm totul pentru tura următoare
+            currentLevelIndex = 0;
             GenerateRandomPlaylist();
         }
     }
@@ -81,4 +115,30 @@ public class LevelManager : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
+
+    public void OpenBestScores()
+    {
+
+        bestScoresPanel.SetActive(true);
+
+    }
+
+
+    public void CloseBestScores()
+    {
+        bestScoresPanel.SetActive(false);
+    }
+
+
+    public void OpenOptionsMenu()
+    {
+        mainMenu.gameObject.SetActive(false);
+        optionsMenu.gameObject.SetActive(true);
+    }
+    public void CloseOptionsMenu()
+    {
+        optionsMenu.gameObject.SetActive(false);
+        mainMenu.gameObject.SetActive(true);
+    }
+
 }

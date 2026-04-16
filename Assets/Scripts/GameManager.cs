@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
    [SerializeField] private int par = 3;
     public TextMeshProUGUI ratingText; // birdie, par or bogey
     private PlayerController playerController;
+    private bool isGameOver = false;
+    public AudioClip holeSound;
 
 
     private void Start()
@@ -20,8 +22,11 @@ public class GameManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("isHole"))
+        if (other.gameObject.CompareTag("isHole") && !isGameOver)
+            
         {
+            AudioSource.PlayClipAtPoint(holeSound, transform.position);
+            isGameOver = true;
             GameOver();
         }
     }
@@ -32,7 +37,16 @@ public class GameManager : MonoBehaviour
         CheckScore();
         particle.gameObject.SetActive(true);
 
+        if(GameSessionManager.Instance != null)
+        {
+            GameSessionManager.Instance.totalStrokes += playerController.strokes;
+
+            GameSessionManager.Instance.StopSession();
+        }
+
         StartCoroutine(LoadNextScene());
+
+
     }
 
     void CheckScore()
@@ -66,16 +80,20 @@ public class GameManager : MonoBehaviour
         {
             ratingText.text = "TRIPLE BOGEY!";
         }
-        else
+        else if(strokeCount > par+3)
         {
             ratingText.text = "FOCUS!";
+        }
+        else
+        {
+            ratingText.text = "NICE!";
         }
 
     }
 
     IEnumerator LoadNextScene()
     {
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(3.2f);
         LevelManager.Instance.LoadNextLevel();
     }
 

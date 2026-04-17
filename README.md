@@ -129,3 +129,19 @@ Design the "Hall of Fame" UI to display best strokes, time, and dates.
 
 Adding more Audios Sounds for different number of strokes.
 
+🚀 Devlog: Scoring Logic, Persistence & Audio Polishing - 16.04.2026
+🟢 Progress Summary: Today I focused on the "behind-the-scenes" architecture, specifically the scoring and session management systems. I successfully debugged critical score duplication issues and finalized the integration of the Audio Mixer across the level playlist.
+
+🛠️ Key Technical Solved / Implemented:
+
+Best Scores & Data Persistence: Implemented the "Hall of Fame" system using JSON serialization and PlayerPrefs. The logic now correctly tracks, sorts, and displays the "Top 5" performances based on total strokes and time, ensuring player records persist after quitting.
+
+Audio Mixer & Spatial SFX: Fully integrated the Audio Mixer to manage SFX and Music groups. Added a dedicated "Hole Sound" triggered upon level completion and linked all UI/gameplay audio sources to the Mixer to allow real-time volume control via the Options menu.
+
+Refactored Level Completion Logic: Solved a critical "double-counting" bug where strokes were being added multiple times. By implementing a state-check (isGameOver) and isolating the scoring authority to the GameManager, I ensured that each level transition is precise and the total session score is mathematically accurate.
+
+Dynamic Session Tracking: Updated the GameSessionManager to handle total time and stroke accumulation across a randomized playlist. Fixed a session-sync issue where the timer would reset between scenes; it now correctly pauses during transitions and resumes upon level load for an accurate "Total Playtime" metric.
+
+
+
+

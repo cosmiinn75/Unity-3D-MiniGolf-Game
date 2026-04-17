@@ -1251,15 +1251,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5898372634543305685, guid: a65279c4fad7ab448813d9e259e9a3b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -153.10303
+      value: -153.103
       objectReference: {fileID: 0}
     - target: {fileID: 5898372634543305685, guid: a65279c4fad7ab448813d9e259e9a3b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 68.53421
+      value: 68.534
       objectReference: {fileID: 0}
     - target: {fileID: 5898372634543305685, guid: a65279c4fad7ab448813d9e259e9a3b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 59.28296
+      value: 59.285
       objectReference: {fileID: 0}
     - target: {fileID: 5898372634543305685, guid: a65279c4fad7ab448813d9e259e9a3b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1578,6 +1578,10 @@ PrefabInstance:
       propertyPath: particle
       value: 
       objectReference: {fileID: 802767290}
+    - target: {fileID: 7315120557116164047, guid: 68266ec0d58dac742986225488b9312e, type: 3}
+      propertyPath: holeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 02e1ef7819ff4be43a656107ac0dc3fe, type: 3}
     - target: {fileID: 7315120557116164047, guid: 68266ec0d58dac742986225488b9312e, type: 3}
       propertyPath: ratingText
       value: 

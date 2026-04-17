@@ -28,7 +28,7 @@ public static class BestScoreManager
         scores.Add(new ScoreData(strokes, timeDisplay, rawTime));
 
         // SORTARE: Întâi după lovituri (mai puține e mai bine)
-        // Apoi după timp brut (mai puține secunde e mai bine)
+        // Apoi după timp (mai puține secunde e mai bine)
         var sortedScores = scores
             .OrderBy(s => s.strokes)
             .ThenBy(s => s.rawTime)
@@ -57,7 +57,7 @@ public static class BestScoreManager
         }
     }
 
-    // FUNCȚIA DE RESET (O poți apela de pe un buton de "Clear Scores")
+    // Functia de reset
     public static void ClearScores()
     {
         PlayerPrefs.DeleteKey(SAVE_KEY);

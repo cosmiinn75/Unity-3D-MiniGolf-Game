@@ -54,9 +54,6 @@
             "m_Id": "9dfcfec3a62442ecbc29620f02d77d6d"
         },
         {
-            "m_Id": "cd51db9c0e8f445389aa23bf180d6b7a"
-        },
-        {
             "m_Id": "e847f3b43b5a4a8aa9bdc6d27ca0cd62"
         }
     ],
@@ -7028,9 +7025,6 @@
             "m_Id": "9dfcfec3a62442ecbc29620f02d77d6d"
         },
         {
-            "m_Id": "cd51db9c0e8f445389aa23bf180d6b7a"
-        },
-        {
             "m_Id": "78a096d8a04b462692d93bcad4aeca04"
         },
         {
@@ -11512,8 +11506,8 @@
     "m_AlphaMode": 0,
     "m_RenderFace": 0,
     "m_AlphaClip": true,
-    "m_CastShadows": true,
-    "m_ReceiveShadows": true,
+    "m_CastShadows": false,
+    "m_ReceiveShadows": false,
     "m_DisableTint": false,
     "m_Sort3DAs2DCompatible": false,
     "m_AdditionalMotionVectorMode": 0,
@@ -12617,34 +12611,6 @@
     "m_DefaultValue": 0.0,
     "m_Labels": [],
     "m_LiteralMode": false
-}
-
-{
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.ShaderKeyword",
-    "m_ObjectId": "cd51db9c0e8f445389aa23bf180d6b7a",
-    "m_Guid": {
-        "m_GuidSerialized": "bbfcf844-f495-4d6a-95cd-5202ec9a2547"
-    },
-    "promotedFromAssetID": "",
-    "promotedFromCategoryName": "",
-    "promotedOrdering": -1,
-    "m_Name": "_MAIN_LIGHT_SHADOWS",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "_MAIN_LIGHT_SHADOWS",
-    "m_DefaultReferenceName": "_MAIN_LIGHT_SHADOWS",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": false,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_KeywordType": 0,
-    "m_KeywordDefinition": 0,
-    "m_KeywordScope": 1,
-    "m_KeywordStages": 63,
-    "m_Entries": [],
-    "m_Value": 1,
-    "m_IsEditable": true
 }
 
 {

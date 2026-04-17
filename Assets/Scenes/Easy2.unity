@@ -3808,7 +3808,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4696218340833953831, guid: 04b8659cad704624588994bd97ac4637, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.689
+      value: -3.674
       objectReference: {fileID: 0}
     - target: {fileID: 4696218340833953831, guid: 04b8659cad704624588994bd97ac4637, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19157,6 +19157,7 @@ MonoBehaviour:
   player: {fileID: 1186579534}
   par: 3
   ratingText: {fileID: 1513949503}
+  holeSound: {fileID: 8300000, guid: 02e1ef7819ff4be43a656107ac0dc3fe, type: 3}
 --- !u!4 &1369884877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1638772576579974000, guid: b465c127c7a70024ea9586596540d14a, type: 3}
@@ -19188,7 +19189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5898372634543305685, guid: a65279c4fad7ab448813d9e259e9a3b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.539
+      value: 3.519
       objectReference: {fileID: 0}
     - target: {fileID: 5898372634543305685, guid: a65279c4fad7ab448813d9e259e9a3b9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19628,7 +19629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1638772576579974000, guid: b465c127c7a70024ea9586596540d14a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.517
+      value: 2.487
       objectReference: {fileID: 0}
     - target: {fileID: 1638772576579974000, guid: b465c127c7a70024ea9586596540d14a, type: 3}
       propertyPath: m_LocalPosition.z

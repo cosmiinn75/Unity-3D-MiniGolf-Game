@@ -134,6 +134,7 @@ MonoBehaviour:
   arrow: {fileID: 0}
   strokeText: {fileID: 0}
   strokes: 0
+  puttSound: {fileID: 0}
 --- !u!54 &2065685303593919241
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -178,3 +179,4 @@ MonoBehaviour:
   player: {fileID: 0}
   par: 3
   ratingText: {fileID: 0}
+  holeSound: {fileID: 8300000, guid: 02e1ef7819ff4be43a656107ac0dc3fe, type: 3}

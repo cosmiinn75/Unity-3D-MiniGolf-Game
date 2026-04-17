@@ -58,10 +58,6 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
-
-
-
     void DisplayStrokeText()
     {
         strokeText.text = "Strokes: " + strokes.ToString();
@@ -80,18 +76,18 @@ public class PlayerController : MonoBehaviour
     void HandleInput()
     {
 
-        //pressed
+        //MouseBtn Pressed
         if (Mouse.current.leftButton.wasPressedThisFrame && !isMoving)
         {
             if (transform.parent == null)
             {
                 lastPos = transform.position;
-            } // retinem ultima pozitie
+            } // Retinem ultima pozitie doar daca nu e pe platforma
 
             //Initializam forta
             force = 1.0f;
             timer = 0;
-            //aratam sageata pe ecran foarte mica
+            //Aratam sageata pe ecran foarte mica
             arrowScale = 0.01f;
             arrow.gameObject.GetComponent<Transform>().localScale = new Vector3(0.05f, arrowScale, 0.05f);
 
@@ -99,12 +95,14 @@ public class PlayerController : MonoBehaviour
 
 
 
-        //held
+        //MoutBtn Held
         if (Mouse.current.leftButton.isPressed && force >= 1.0f && isMoving == false)
         {
             
-            ArrowColor();
+            ArrowColor(); //Schimbam culoarea sagetii bazat pe procentul fortei din forceMax
+
             arrow.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+
             timer += Time.deltaTime;
 
             if (timer >= cooldownForce && !isAtFullForce)
@@ -124,7 +122,7 @@ public class PlayerController : MonoBehaviour
 
             if (force > forceMax)
             {
-                force = forceMax;
+                force = forceMax; // Daca e la forta maxima pastram aceeasi forta
                 isAtFullForce = true;
             }
 
@@ -132,7 +130,7 @@ public class PlayerController : MonoBehaviour
             { 
                 float maxTime = 1.0f;
                 cancelTimer += Time.deltaTime;
-                if(cancelTimer > maxTime)
+                if(cancelTimer > maxTime) // Daca ramane la forta maxim prea mult timp resetam sageata si forta
                 {
                     shotCancelled = true;
                     force = 0.0f;
@@ -146,7 +144,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        //released
+        //MouseBtn Released
         if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
             if (force >= 1.0f && !shotCancelled)
@@ -163,7 +161,7 @@ public class PlayerController : MonoBehaviour
             isAtFullForce = false;
             shotCancelled = false;
             cancelTimer = 0.0f;
-            arrow.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            arrow.gameObject.GetComponent<SpriteRenderer>().enabled = false; //Resetam tot
         }
     }
 
@@ -176,20 +174,15 @@ public class PlayerController : MonoBehaviour
         }
         float camY = Camera.main.transform.eulerAngles.y;
         Vector3 finalDir = Quaternion.Euler(0, camY, 0) * Vector3.forward * force;
-        rb.AddForce(finalDir, ForceMode.VelocityChange);
-      //  Debug.DrawRay(transform.position, finalDir * 50.0f, Color.red, 10.0f);
+        rb.AddForce(finalDir, ForceMode.VelocityChange); // Adaugam viteza bazat pe unde se uita camera(unde arata sageata)
     }
 
 
-    void RotateArrow()
+    void RotateArrow() //Rotim sageata in functie de camera
     {
        arrow.transform.position = transform.position;
         float camY = Camera.main.transform.eulerAngles.y;
         arrow.transform.rotation = Quaternion.Euler(0, camY, 0);
-
-  
-
-
     }
 
 
@@ -208,8 +201,6 @@ public class PlayerController : MonoBehaviour
             arrowColor.g -= 2*Time.deltaTime;
         }           
 
-
-
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -218,8 +209,8 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 normal = collision.contacts[0].normal;
             float bumperSpeed = 3.0f;
-            Vector3 reflectedDir = Vector3.Reflect(rb.linearVelocity, normal).normalized;
-            rb.AddForce(reflectedDir*bumperSpeed, ForceMode.VelocityChange);
+            Vector3 reflectedDir = Vector3.Reflect(rb.linearVelocity, normal).normalized; // Reflectam viteza pe directia normalei
+            rb.AddForce(reflectedDir*bumperSpeed, ForceMode.VelocityChange); // Aplicam o forta pe acea directie reflectata
         }
 
 
@@ -227,7 +218,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!isResetting) {
                 isResetting = true;
-                StartCoroutine(ResetPositionAfterDelay()); 
+                StartCoroutine(ResetPositionAfterDelay()); // Se reseteaza pozitia dupa cateva momente ce a atins pamantul
             }
 
             
@@ -236,8 +227,8 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("isPlatform"))
         {
-            transform.SetParent(collision.transform);
-            rb.linearDamping = 2.0f;
+            transform.SetParent(collision.transform); // Facem sa se miste in acelasi timp cu platforma
+            rb.linearDamping = 2.0f; // Incetinim mingea cand e pe platforma
             
         }
 
@@ -250,15 +241,15 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("isPlatform"))
         {
-            transform.SetParent(null);
-            rb.linearDamping = 1.0f;
+            transform.SetParent(null); 
+            rb.linearDamping = 1.0f; // Resetam la normal
         }
     }
 
     IEnumerator ResetPositionAfterDelay()
     {
        
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.8f); // Dupa 0.8 secunde
 
 
         if (rb != null)
@@ -279,7 +270,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("isHole") && !isLevelFinished)
+        if (other.gameObject.CompareTag("isHole") && !isLevelFinished) //Oprim mingea sa nu mai poata sa loveasca jucatorul
         {
             isLevelFinished = true;
             arrow.SetActive(false);

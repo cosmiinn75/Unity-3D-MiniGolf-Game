@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEditor.Toolbars;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -71,7 +70,7 @@ public class LevelManager : MonoBehaviour
         }
         currentLevelIndex = 0;
         GenerateRandomPlaylist();
-        LoadNextLevel(); // Încarcă primul nivel din playlist-ul proaspăt
+        LoadNextLevel();
     }
 
     public void LoadNextLevel()
@@ -80,6 +79,7 @@ public class LevelManager : MonoBehaviour
         {
             GameSessionManager.Instance.StartSession();
         }
+
         // Verificăm dacă mai avem nivele în listă
         if (currentLevelIndex < fullPlaylist.Count)
         {
@@ -89,7 +89,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            // AM TERMINAT TOATE NIVELELE
+            // Am terminat toate nivelele
             if (GameSessionManager.Instance != null)
             {
                 GameSessionManager.Instance.StopSession();
@@ -99,8 +99,8 @@ public class LevelManager : MonoBehaviour
                     GameSessionManager.Instance.totalTime
                 );
             }
-            SceneManager.LoadScene("MainMenu");
-            // Resetăm totul pentru tura următoare
+            SceneManager.LoadScene("CongratsMenu");
+            // Resetăm totul pentru data viitoare
             currentLevelIndex = 0;
             GenerateRandomPlaylist();
         }
@@ -108,7 +108,6 @@ public class LevelManager : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("Quit executat");
         Application.Quit();
 
         #if UNITY_EDITOR

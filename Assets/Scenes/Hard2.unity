@@ -797,6 +797,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 439791300}
     - target: {fileID: 7315120557116164047, guid: 68266ec0d58dac742986225488b9312e, type: 3}
+      propertyPath: holeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 02e1ef7819ff4be43a656107ac0dc3fe, type: 3}
+    - target: {fileID: 7315120557116164047, guid: 68266ec0d58dac742986225488b9312e, type: 3}
       propertyPath: ratingText
       value: 
       objectReference: {fileID: 811707355}

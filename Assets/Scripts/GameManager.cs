@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
         playerController = player.GetComponent<PlayerController>();
         particle.gameObject.SetActive(false);
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("isHole") && !isGameOver)
@@ -39,9 +40,9 @@ public class GameManager : MonoBehaviour
 
         if(GameSessionManager.Instance != null)
         {
-            GameSessionManager.Instance.totalStrokes += playerController.strokes;
+            GameSessionManager.Instance.totalStrokes += playerController.strokes; //Se aduna doar la final stroke urile
 
-            GameSessionManager.Instance.StopSession();
+            GameSessionManager.Instance.StopSession(); // Oprim cronometrul
         }
 
         StartCoroutine(LoadNextScene());
